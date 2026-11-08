@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/pajamastan-space-administration-v1.html" }
+    { "source": "/", "destination": "/pajamastan-space-administration-v2.html" }
   ]
 }
