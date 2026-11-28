@@ -13,6 +13,7 @@ module.exports = async (req, res) => {
     });
     const text = await r.text();
     if (!r.ok || !/^1 /m.test(text)) throw new Error('bad upstream');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     res.setHeader('Cache-Control', 's-maxage=7200, stale-while-revalidate=86400');
     res.status(200).send(text);
